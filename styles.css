@@ -1,0 +1,98 @@
+/* Add your custom CSS styles here */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Set minimum height of the body to full viewport height */
+  background-image: url("rm373batch2-08.jpg"); /* Replace with the correct path to your background image */
+  background-size: cover; /* Adjust the background-size property as needed */
+  background-position: center; /* Center the background image */
+}
+
+header {
+  background-color: #000; /* Black background for the header */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative; /* Add this to make the pseudo-element position relative to the header */
+  animation: headerAnimation 5s infinite alternate; /* Apply the animation to the header */
+}
+
+@keyframes headerAnimation {
+  from {
+    background-color: #6872a5;
+  }
+  to {
+    background-color: #070214; /* Change to a slightly lighter shade of black */
+  }
+}
+
+/* Flexbox layout for the main content sections */
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Style for individual content sections */
+.section {
+  flex: 1;
+  max-width: 400px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  color: #93aeb4; /* Set text color to white for the sections */
+}
+
+/* Hover animations for the sections */
+.section:hover {
+  background-color: #f8f8f8; /* Change background color on hover */
+  transform: scale(1.05); /* Slightly scale up the section on hover */
+}
+
+/* Additional styles for the interactive button */
+.button-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+  background-color: #f2f2f2; /* White/grayish color for the footer */
+  color: #333; /* Dark color for the text in the footer */
+  text-align: center;
+  padding: 10px;
+  margin-top: auto; /* Push the footer to the bottom of the page */
+}
+
+/* Hide section content by default */
+.section-content {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Show section content when .active class is present */
+.section.active .section-content {
+  max-height: 300px; /* Adjust the height as needed */
+  opacity: 1;
+}
+
+.section a i {
+  font-size: 24px; /* Adjust the size of the icons */
+  color: #007bff; /* Change the color of the icons */
+  margin: 5px; /* Add some spacing between the icons */
+}

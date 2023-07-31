@@ -1,12 +1,11 @@
-// Custom JavaScript
+// JavaScript code (script.js)
+// Get all the sections
+const sections = document.querySelectorAll('.section');
 
-// Get all the section titles
-const sectionTitles = document.querySelectorAll('.section-title');
-
-// Add click event listener to each section title
-sectionTitles.forEach(title => {
-  title.addEventListener('click', () => {
-    // Toggle the 'active' class on the parent section to show/hide the content
-    title.parentElement.classList.toggle('active');
+// Add click event listener to each section
+sections.forEach(section => {
+  section.addEventListener('click', () => {
+    // Toggle the 'active' class on the clicked section to show/hide the content
+    section.classList.toggle('active');
   });
 });
